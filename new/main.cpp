@@ -7,9 +7,22 @@
 //
 
 #include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using namespace std;
+int main()
+{
+    int a[5],b[5],i=0;
+    int *p=a;
+    while(i<5)
+    {
+        cin>>*p++;
+        i++;
+    }
+    for(p=&a[4],i=0;i<5;)
+    {
+        b[i]=*p;
+        cout<<b[i]<<'\t'<<endl;
+        p--;
+        i++;
+    }
+        return 0;
 }
